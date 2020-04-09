@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+
+
+<style>
+/*
+-++ CSS Dark Mode and Color Theme switch for websites and HTML apps.  +++-
+--- Original author	:: Nik K. linkedin.com/in/nik--k---/    (  4.Feb 2020). 
+--- Code adoption	:: YourName    (date).
+--- License		:: GNU General Public License v 3.0.
+--- Latest version	:: github.com/Dorson/CSS-Dark-Mode-and-color-switch
+*/
+
+
+/* Set default color variables.  */
+
+:root {
+
+--color-html: #F9F9F9 ;
+--color-body: #fdfdfd ;
+--color-text: #051105 ;
+--color-link: #1122D8 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+
+}
+
+
+/* If "dark" is set as preferred color in user app settings. */
+
+@media (prefers-color-scheme: dark) {
+
+ :root {
+  --color-html: #0e0b0b ;
+  --color-body: #1a1414 ;
+  --color-text: #d1d1d1 ;
+  --color-link: #4fbcff ;
+  --color-selected-text: #000 ;
+  --color-selected-bg: #CF7 ;
+ }
+}
+
+/* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
+
+html.dark { 
+
+--color-html: #0e0b0b ;
+--color-body: #1a1414 ;
+--color-text: #d1d1d1 ;
+--color-link: #4fbcff ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+
+}
+
+/* Deep Purple color variables, if "purple" is set as HTML tag's CSS class */ 
+
+html.purple { 
+
+--color-html: #0a0614 ;
+--color-body: #120b24 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+/* Deep Green color variables, if "green" is set as HTML tag's CSS class */
+
+html.green { 
+
+--color-html: #04160a ;
+--color-body: #072813 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+/* Cobalt Blue color variables, if "blue" is set as HTML tag's CSS class */
+
+html.blue { 
+
+--color-html: #000d1a ;
+--color-body: #001830 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+/* html box frame and global sizes  */
+
+html { box-sizing: border-box ; }
+html *, *:before, *:after { box-sizing: inherit ; }
+
+html { font-size: 115% ; padding: 0px 1em 0px 1em ; background: var(--color-html) ; }
+html, body { margin: 0px ; }
+
+/* limit max-width to avoid over-sized elements. */
+
+body,img,iframe,input,select,element,script,embed,form {
+  max-width: calc(100% - 4px) ;
+}
+
+body {
+  padding: 2rem 3% 3rem 3% ;
+  min-height: 99% ; display: block ;
+  background: var(--color-body) ; color: var(--color-text) ;
+}
+
+/* Default minimal margin between all elements. */
+body * { margin: 0.5rem 0.3rem ; }
+
+
+/* Typography and font styles. */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body, input, select, textarea, body iframe {
+  font:1.14em/1.5em Montserrat, sans-serif ;
+}
+
+h1,h2,h3,h4,h5,h6 {
+ margin: 1rem 0rem 1rem 0rem ;
+ font-family: Montserrat, Roboto, Verdana, sans-serif ;
+ letter-spacing: 0.1rem ;
+}
+
+h1 { font:1.555rem/1.777rem medium ; }
+h2 { font:1.444rem/1.666rem medium ; }
+h3 { font:1.333rem/1.555rem medium ; }
+h4 { font:1.222rem/1.444rem sans ; }
+h5 { font:1.161rem/1.333rem sans ; }
+h6 { font:1.145rem/1.250rem sans ; }
+
+* > h1:not(:first-of-type):not(:first-child ) ,
+
+* > h2:not(:first-of-type):not(:first-child ) ,
+
+* > h3:not(:first-of-type):not(:first-child ){
+
+  margin: 2rem 0rem 1rem 0rem ;
+}
+
+
+::selection {
+ background: var(--color-selected-bg) ; color: var(--color-selected-text) ;
+}
+
+/* Style for links. */
+a:link, a:visited { color : var(--color-link) ; text-decoration: none ; }
+a:hover { border-bottom: 0.185rem dashed var(--color-link) ; border-radius: 0.4em ; }
+
+
+button {
+	margin: 0.244rem ;
+	box-shadow:inset 1px 3px 3px 0px #f7c5c0;
+	background: linear-gradient(to bottom, #f04257 1%, #e0122a 99%);
+	background-color: #e0122a ;
+	border-radius: 0.4rem ;
+	border: 0px ;
+	display: inline ;
+	cursor: pointer ;
+	color: #f1f1f1 ;
+	text-shadow: 0px 1px 1px #222 ;
+	font-family: Arial ;
+	font-size: 1.2rem ;
+	font-weight: bold ;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem ;
+	text-decoration: none ;	
+}
+
+button:hover {
+	background: linear-gradient(to bottom, #ee2b41 3%, #f47181 99%) ;
+	background-color: #ee2b41 ;
+	box-shadow: 1px 2px 2px 0px #f04257 ;
+}
+
+button:active {
+	background: #e0122a ;
+	box-shadow: none ;
+	text-decoration: none ;
+}
+
+
+
+
+/* scroll-bar style. */
+
+body::-webkit-scrollbar {
+  margin: 0px ; padding: 0px ;
+  width: 0.99rem ;
+  background: transparent ;
+}
+body::-webkit-scrollbar-thumb {
+  margin: 0px ; padding:0px;
+  width: 0.99rem ;
+  border: 4px double #ccc ;
+  background: #edf0f3 ; border-radius: 9px ;
+  box-shadow: 0rem 0.1rem 0.3rem #ccc ;
+}
+
+
+/* docker sticker menu dock. */
+
+.docker { margin: 1px ; padding: 0px ; position: fixed ;
+bottom:0%; left: 15%; z-index:99; width: 13.5rem; height: 2.7rem; color: var(--color-text) ;
+text-align: left ; overflow: hidden ; background: transparent ; border: 0px ;
+}
+
+.docker:hover, .docker:active { background: var(--color-body) ; color: var(--color-text) ;
+margin:1px;padding: 0.4rem ; position:fixed;bottom:0%;
+left:2%;z-index:250;width:73%;height:70%; display:block;
+vertical-align:top;text-align:center;border-radius:8px;box-shadow:0px 1px 33px #aaa;
+}
+
+.code-box  {
+  color: #000 ; background:  #d7dbda ;  border: solid #668f99 ;
+  border-width: 0.155rem .2rem .2rem .444rem ; border-radius: 0.9rem 1.5rem 0.5rem 2rem ;  
+  padding: .8em .6em ; overflow: auto ; width: auto ; margin: 1rem ;
+      
+}
+
+
+/* Print exception rules. Very useful to print website as PDF and grandma :-)  */
+@media print
+{
+   .docker , .menue { visibility: hidden; }
+   .no-print, .no-print *
+    {
+      display: none !important;
+    }
+}
+ 
+</style>
+
+
+
+<script>
+/*
+-+++++ JavaScript CSS Class Switch function for websites and HTML apps.  +++-
+--- Original author	:: Nik K. linkedin.com/in/nik--k---/   (  4.Feb 2020). 
+--- Code adoption	:: YourName  (date).
+--- License		:: GNU General Public License v 3.0.
+--- Latest version	:: github.com/Dorson/CSS-Dark-Mode-and-color-switch
+*/
+
+window.onerror = null ;
+
+
+/* During load time, we remember the saved CSS classes from local memory */
+
+
+document.addEventListener("DOMContentLoaded", RememberClasses() , true ) ;
+
+function RememberClasses() {
+
+ var ClassMemory = [
+      ["html" , "ColorMode"] ,
+      ["html" , "TextSize"] 
+   ] ;
+
+ for ( let [ Tag, MemoryName ] of ClassMemory ) {
+    /*  On Errors we skip one loop. */
+    if (!localStorage.getItem( MemoryName ) || !document.querySelector( Tag ) ) {
+       continue ;
+     }
+     else {
+    /* Else we remember and set CSS classes. */
+        var MemoryValue = localStorage.getItem( MemoryName );
+        document.querySelector( Tag ).classList.add( MemoryValue );
+      }
+  }
+
+}
+
+
+
+/* In the dark, IF ColorMode was NOT set, and the hour is between 20:00 and 7:00 */
+
+document.addEventListener("DOMContentLoaded", AfterDark() , true ) ;
+
+function AfterDark() {
+
+ var hour = new Date().getHours() ;
+
+  if ( !localStorage.getItem( "ColorMode" ) && ( hour >= 20 || hour < 7 ) ) {
+
+     document.querySelector("html").classList.add( "dark" ) ;
+   }
+}
+
+
+
+/*  Switch ON,OFF CSS class + Save it in local memory. */
+
+function ClassSwitch(TagName, ClassName, MemoryName) {
+
+ /* If class was already set, then switch it OFF and clean memory */
+  
+    if (localStorage.getItem( MemoryName ) === ClassName ) {
+        localStorage.removeItem( MemoryName );
+        document.querySelector( TagName ).classList.remove( ClassName );
+    }
+
+ /* Else we clean old memory, save and set new setting  */
+  
+     else {
+        var MemoryContent = localStorage.getItem( MemoryName );
+
+        document.querySelector( TagName ).classList.remove( MemoryContent );
+        localStorage.removeItem( MemoryName );
+
+        localStorage.setItem( MemoryName, ClassName );
+        document.querySelector( TagName ).classList.add( ClassName );
+     }
+
+    return false;
+}
+
+
+
+</script>
+
+
+
+<title>CSS Dark Mode and Color Theme Switch for Websites and HTML Apps.</title>
+</head><body>
+
+
+<div style="margin: 0rem 0px 5px 0px; width:99%; display:block;">
+  <b style="font: 3rem/3.5rem bold sans ;"> LOGO </b>
+  / &#9776; MENU  / Top 5 links / Search box / Login. 
+</div>
+
+
+<h1> JS Color Theme Switch = CSS Dark Mode for Websites and HTML Apps. </h1>
+
+<p>
+ The human day and night cycle is important for our sleep and the eyes.
+ The correct amount of light is very important for good health.
+ During the evening and the night we need dark colors on websites and apps.
+ It is more natural to have the dark colors at night.
+ The following article explains the free code that we can use for the
+ Night/Dark Mode = light switch for websites and HTML apps.
+</p>
+
+<p>
+ Use this code for free and where you want. It is open source, free and can be changed too.
+ Use it as you like, as long as you keep the code open source, as same as the original.
+ If you improve or publish the code, please include the same open source license
+ and the names of the original author or contributors. Please also include yourself
+ as a contributor, if you improve or publish the code in the future.
+ Have a lot of fun with this JS code for the website color switch !
+</p>
+
+
+<h2> :: Click and switch the colors :: </h2>
+
+<p>
+Dark Mode:
+<a href="javascript:void(0);" onclick="ClassSwitch('html' , 'dark' , 'ColorMode');" title="Lights ON, OFF." >
+ 🌓 ⇄ 💡
+</a>
+
+Purple Mode:
+<a href="javascript:void(0);" onclick="ClassSwitch('html' , 'purple' , 'ColorMode');" title="Set Purple Colors." >
+ &#128156; ⇄ 💡 
+</a>
+
+Green Mode:
+<a href="javascript:void(0);" onclick="ClassSwitch('html' , 'green' , 'ColorMode');" title="Set Green Colors." >
+ &#127823; ⇄ 💡 
+</a>
+
+Cobalt Blue :
+<a href="javascript:void(0);" onclick="ClassSwitch('html' , 'blue' , 'ColorMode');" title="Set Blue Colors." >
+ &#127754; ⇄ 💡 
+</a>
+</p>
+
+
+<p>
+Try clicking the same button link two times and see what happens.
+
+<br />
+<button onclick="ClassSwitch('html' , 'dark' , 'ColorMode');" >
+ Dark <b style="font-size:1.2rem; background-color: #1a1414 ; color:#d1d1d1;"> &nbsp; 🌓 ⇄ 💡 &nbsp; </b> </button>
+
+<button onclick="ClassSwitch('html' , 'purple' , 'ColorMode');" >
+ Purple <b style="font-size:1.2rem; background-color: #120b24 ; color: #724fc9 ;"> &nbsp; &#128156; ⇄ 💡 &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'green' , 'ColorMode');" >
+ Green <b style="font-size:1.2rem; background-color: #072813 ; color: #26d968 ;"> &nbsp; &#127823; ⇄ 💡 &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'blue' , 'ColorMode');" >
+ Cobalt <b style="font-size:1.2rem; background-color: #001830 ; color: #0080ff ;"> &nbsp; &#127754; ⇄ 💡 &nbsp; </b>
+</button>
+<br />
+</p>
+
+
+
+
+<h6> Be healthy and happy ! </h6>
+
+
+<div class="docker">
+
+<b style="background: #f1f1f1 ; opacity:0.7 ; color: #222 ; padding: 0.2rem 0.7rem ;
+ font: bold 1.7rem/3rem sans ;  border-radius: 0.3rem ; border: 0px ; ">
+ &#9776; &#x2661; &#9788; &#9881; &#8673;
+</b>
+
+<br />
+
+<b> &#x23FB; On / Off Color : </b> <br />
+
+<button onclick="ClassSwitch('html' , 'root' , 'ColorMode');" >
+ <b style="font-size:1.2rem; background-color: #ddd ; color:#fff;"> &nbsp; ❅ &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'dark' , 'ColorMode');" >
+ <b style="font-size:1.2rem; background-color: #1a1414 ; color:#d1d1d1;"> &nbsp; 🌓 &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'purple' , 'ColorMode');" > 
+  <b style="font-size:1.2rem; background-color: #120b24 ; color: #724fc9 ;"> &nbsp; &#128156; &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'green' , 'ColorMode');" >
+  <b style="font-size:1.2rem; background-color: #072813 ; color: #26d968 ;"> &nbsp; &#127823; &nbsp; </b>
+</button>
+
+<button onclick="ClassSwitch('html' , 'blue' , 'ColorMode');" >
+  <b style="font-size:1.2rem; background-color: #001830 ; color: #0080ff ;"> &nbsp; &#127754; &nbsp; </b>
+</button>
+
+
+<p> Be happy. Talk with people.</p>
+
+ <a href="" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href),'_blank','toolbar=0,location=0,status=0,width=600,height=500,left=50,top=40');return false;"> <b>&#128038; </b> Share on Twitter </a>
+
+<p>
+ <a href="" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(location.href),'_blank','toolbar=0,location=0,status=0,width=600,height=500,left=50,top=40');return false;"> <b> &#13265;</b> Share on Linked-in</a>
+</p>
+
+ <a href="" onclick="window.open('https://www.facebook.com/share.php?u='+encodeURIComponent(location.href),'_blank','toolbar=0,location=0,status=0,width=600,height=500,left=50,top=40');return false;"> <b> &#70;B </b> Share on Facebook </a>
+
+<p><b> Thank you for sharing !</b></p>
+
+</div>
+
+
+<!--
+-++ CSS Dark Mode and Color Theme switch for websites and HTML apps.  +++-
+--- Original author	:: Nik K. linkedin.com/in/nik--k---/    (  4.Feb 2020). 
+--- Code adoption	:: YourName    (date).
+--- License		:: GNU General Public License v 3.0.
+--- Latest version	:: github.com/Dorson/LTS-flex-css-style-theme-generator
+-->
+
+
+<div style="clear:both;">.</div>
+</body></html>
