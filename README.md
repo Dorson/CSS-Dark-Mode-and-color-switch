@@ -10,12 +10,13 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
 
 # How to use  / How it works ?
  
- 1. Define color variables in CSS as groups of html.class rules.
-    Use those color variables instead of direct color values inside of other CSS rules.
+ 1. Define color variables in CSS. As groups of html.className rules.
+    Use those named color variables, instead of direct color values inside
+    of following CSS rules later on.
     
     
- 2. Activate the html.class color themes by setting and saving the
-    CSS class of the HTML Tag with the Javascrip function call from
+ 2. Activate the html.class color theme by setting and saving the
+    CSS class of the HTML Tag with the JavaScript function call from
     the button or link, or click, etc..
     
     We can lazzy-load this JavaScript function from an external js-file,
@@ -24,17 +25,25 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
  
  3. On-page-Load we set the last-saved HTML Tag's CSS color class
     to remember the last saved ColorMode setting from the
-    Local Memory of the browser.
+    LocalMemory of the browser.
  
     We need to do that on every page load with an event call of the JS functon.
     Can use the js-file with that CSS class settings memory recall function on top
     of page, before the page DOM frame is painted.
     
-    CSS is missing style rules with read-acess of the localMemory,
+    CSS is missing style rules with read-access of the localMemory,
     so we need to use JavaSript for that :-(
     
+    In the best case future of the CSS standard: we could just have read-only acess to
+    the LocalMeory list values of the browser, so that we could use the following
+    CSS rule, instead of the JavaScript to remember the last color setting of the user:
+    
+    html[localMemory( ColorTheme == dark )] { backgrund: black ; }
+    
+    One could wish for the better CSS flexibility in the future :-)
+    
 
-# Remeber to keep the code open source as the original !
+# Remember to keep the code open source as the original !
 
  Have fun ! 
  
