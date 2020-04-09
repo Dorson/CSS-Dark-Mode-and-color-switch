@@ -17,7 +17,7 @@
 
 /* Set default color variables.  */
 
-:root {
+:root , html.snow-white {
 
 --color-html: #F9F9F9 ;
 --color-body: #fdfdfd ;
@@ -33,7 +33,7 @@
 
 @media (prefers-color-scheme: dark) {
 
- :root {
+ html:not(.snow-white) {
   --color-html: #0e0b0b ;
   --color-body: #1a1414 ;
   --color-text: #d1d1d1 ;
@@ -425,7 +425,7 @@ Try clicking the same button link two times and see what happens.
 
 <b> &#x23FB; On / Off Color : </b> <br />
 
-<button onclick="ClassSwitch('html' , 'root' , 'ColorMode');" >
+<button onclick="ClassSwitch('html' , 'snow-white' , 'ColorMode');" >
  <b style="font-size:1.2rem; background-color: #ddd ; color:#fff;"> &nbsp; ❅ &nbsp; </b>
 </button>
 
