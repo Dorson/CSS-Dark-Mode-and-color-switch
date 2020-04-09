@@ -37,3 +37,13 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
 # Remeber to keep the code open source as the original !
 
  Have fun ! 
+ 
+ 
+
+# Related, useful links :
+
+Color and style principles for the dark mode colors on websites and in apps:
+https://material.io/design/color/dark-theme.html
+
+
+
