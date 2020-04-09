@@ -1,0 +1,300 @@
+@charset "UTF-8";  /* Set the encoding of file to UTF-8 */
+
+/* 
+This is a working develeopment file for human readability.
+Use the CSS optimizer to reduce file size for published websites or apps.
+
+-++ LTS Flex CSS Theme websites and HTML apps.  +++-
+--- Original author	:: Nik K. linkedin.com/in/nik--k---/    (  5.Jan 2020). 
+--- Code adoption 	:: YourName    (date).
+--- License	      	:: GNU General Public License v 3.0.
+--- Latest version	:: github.com/Dorson/LTS-flex-css-style-theme-generator
+
+Global size and style settings first, then we can overwrite them in
+exceptional cases below. Computers use the last mentioned CSS setting. 
+ */
+
+
+/* Set default color variables.  */
+
+:root {
+
+--color-html: #F9F9F9 ;
+--color-body: #fdfdfd ;
+--color-text: #051105 ;
+--color-link: #1122D8 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+
+}
+
+
+/* If "dark" is set as preferred color in user app settings. */
+
+@media (prefers-color-scheme: dark) {
+
+ :root {
+  --color-html: #0e0b0b ;
+  --color-body: #1a1414 ;
+  --color-text: #d1d1d1 ;
+  --color-link: #4fbcff ;
+  --color-selected-text: #000 ;
+  --color-selected-bg: #CF7 ;
+  }
+}
+
+/* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
+
+html.dark { 
+
+--color-html: #0e0b0b ;
+--color-body: #1a1414 ;
+--color-text: #d1d1d1 ;
+--color-link: #4fbcff ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+
+}
+
+/* Deep Purple color variables, if "purple" is set as HTML tag's CSS class */ 
+
+html.purple { 
+
+--color-html: #0a0614 ;
+--color-body: #120b24 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+/* Deep Green color variables, if "green" is set as HTML tag's CSS class */
+
+html.green { 
+
+--color-html: #04160a ;
+--color-body: #072813 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+/* Cobalt Blue color variables, if "blue" is set as HTML tag's CSS class */
+
+html.blue { 
+
+--color-html: #000d1a ;
+--color-body: #001830 ;
+--color-text: #d1d1d1 ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+--color-link: #4fbcff ;
+
+}
+
+
+/*
+body width is set to 99% to avoid screen overflow on all devices.
+Font-size 115% in the html tag = 1rem unit = 17-20px, if 16px was user default,
+then we reference that everywhere as global unit of global text line-hight.
+It is the calculation in line heights, where size can be 0.7rem = 70% of
+text-line height.
+*/
+
+/*
+html box-sizing will include border margins,
+all the rest use the size of their parent box
+*/
+
+html {box-sizing: border-box;}
+html *, *:before, *:after {box-sizing: inherit;}
+
+html {font-size:115%;padding:0px 1em 0px 1em;background:var(--color-html);}
+html, body {margin: 0px;}
+
+
+/* max-width:99.5%; for over-sized elements to avoid screen overflow on all devices. */
+
+body,img,iframe,input,select,element,script,embed,form{
+  max-width:calc(100% - 4px);
+}
+
+body { padding: 7rem 3% 3rem 3% ;
+  min-height: 99% ; display: block ;
+  background: var(--color-body) ; color: var(--color-text) ;
+}
+
+/* Default minimal spacing between all elements. Set other, where needed. */
+body * { margin: 0.5rem 0.3rem ; }
+
+/* Typography Styles. rem unit size is best set as font size in html tag. */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body, input, select, textarea, body iframe {
+  font:1.14em/1.5em Montserrat, sans-serif ;
+}
+
+h1,h2,h3,h4,h5,h6 {
+ margin: 1rem 0rem 1rem 0rem ;
+ font-family: Montserrat, Roboto, Verdana, sans-serif ;
+ letter-spacing: 0.1rem ;
+}
+
+h1 { font:1.555rem/1.777rem medium ; }
+h2 { font:1.444rem/1.666rem medium ; }
+h3 { font:1.333rem/1.555rem medium ; }
+h4 { font:1.222rem/1.444rem sans ; }
+h5 { font:1.161rem/1.333rem sans ; }
+h6 { font:1.145rem/1.250rem sans ; }
+
+* > h1:not(:first-of-type):not(:first-child ) ,
+
+* > h2:not(:first-of-type):not(:first-child ) ,
+
+* > h3:not(:first-of-type):not(:first-child ){
+
+  margin: 2rem 0rem 1rem 0rem ;
+}
+
+input,textarea,select {padding:0.3rem;}
+
+input[type="checkbox"],input[type="radio"]{
+  width:1.5em; height:1.5em;
+}
+
+form{
+  padding:0.7rem;
+  position: relative;
+  display: flex;
+  max-width:98%;
+  vertical-align: top;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: space-evenly;
+  align-content: space-around;
+
+}
+form *{
+  position: relative;
+  margin:0.5em 0.1em 0.3em 0.1em;
+  max-width:99%;
+  display:inline-flex;
+  align-self:stretch;
+}
+
+
+/* GLOBAL COLORS that were not set before. */
+
+
+form {background-color: #e1effe;}
+
+
+button , input[type=submit] {
+	margin: 0.244rem ;
+	box-shadow:inset 1px 3px 3px 0px #f7c5c0;
+	background: linear-gradient(to bottom, #f04257 1%, #e0122a 99%);
+	background-color: #e0122a ;
+	border-radius: 0.4rem ;
+	border: 0px ;
+	display: inline ;
+	cursor: pointer ;
+	color: #f1f1f1 ;
+	text-shadow: 0px 1px 1px #222 ;
+	font-family: Arial ;
+	font-size: 1.2rem ;
+	font-weight: bold ;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem ;
+	text-decoration: none ;	
+}
+
+button:hover {
+	background: linear-gradient(to bottom, #ee2b41 3%, #f47181 99%) ;
+	background-color: #ee2b41 ;
+	box-shadow: 1px 2px 2px 0px #f04257 ;
+}
+
+button:active {
+	background: #e0122a ;
+	box-shadow: none ;
+	text-decoration: none ;
+}
+
+::selection{background:var(--color-selected-bg);color:var(--color-selected-text);}
+
+/* GLOBAL style settings that were not set before. */
+
+
+/* Style for links. */
+a:link, a:visited { color : var(--color-link) ; text-decoration: none ; }
+a:hover { border-bottom: 0.185rem dashed var(--color-link) ; border-radius: 0.4em ; }
+
+input:hover, select:hover, textarea:hover {
+  box-shadow: 0.5em 0.5em 0.7em #aaa; cursor: pointer; 
+}
+
+/* scrollbar style is fun, but could confuse some users. */
+body::-webkit-scrollbar {
+  margin:0px;padding:0px;
+  width: 0.99rem;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  margin:0px;padding:0px;
+  width: 0.99rem;
+  border: 4px double #ccc;
+  background: #edf0f3; border-radius: 9px;
+  box-shadow: 0rem 0.1rem 0.3rem #ccc ;
+}
+
+
+/* GLOBAL CSS element classes, if needed. Keep them to the minimum.
+Set CSS classes on individual pages, when they are NOT used globally.
+
+/* Examples of CSS Global classes for content boxes.
+
+.l-box {box, left on the screen}
+.r-box {box, right on the screen}
+.footer {bottom footer with quick links, final text, etc..}
+ */
+
+/* .header is the box at the top of screen
+for logo, menu, links, search, login, etc. */
+
+.header {margin:10px 0px 5px 0px; width:99%; display:block;}
+
+/* .docker is the sticky menue bar at the bottom of screen
+for quick settings and buttons */
+
+.docker { margin: 1px ; padding: 0px ; position: fixed ;
+bottom:0%; left: 15%; z-index:99; width: 13.5rem; height: 2.7rem; color: var(--color-text) ;
+text-align: left ; overflow: hidden ; background: transparent ; border: 0px ;
+}
+
+.docker:hover, .docker:active { background: var(--color-body) ; color: var(--color-text) ;
+margin: 1px ; padding: 0.4rem ; position:fixed;bottom:0%;
+left:2%;z-index:250;width:73%;height:70%; display:block;
+vertical-align:top;text-align:center;border-radius:8px;box-shadow:0px 1px 33px #aaa;
+}
+
+
+.v-center { vertical-align: middle; }
+.h-center {  text-align: center}
+.all-center { vertical-align: middle; text-align: center; display: flex;
+  justify-content: center; }
+
+
+/* Print exception rules. Very useful to print website as PDF and grandma :-)  */
+@media print {
+   .docker , .menue { visibility: hidden; }
+   .no-print, .no-print *
+    {
+      display: none !important;
+    }
+}
+
+
