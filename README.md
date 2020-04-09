@@ -1,13 +1,14 @@
 # CSS Dark Mode and Color Theme Switch
 Simple DarkMode AND multi color theme switch for Websites and apps.
 
-# Try it : https://dorson.github.io/CSS-Dark-Mode-and-color-switch/
+# Try it here : https://dorson.github.io/CSS-Dark-Mode-and-color-switch/
 
 
-# Why :
+# Why ?
  We need this for the night time and our eyesight health.
  
- # How to use  / How it works.
+
+# How to use  / How it works ?
  
  1. Define color variables in CSS as groups of html.class rules.
     Use those color variables instead of direct color values inside of other CSS rules.
