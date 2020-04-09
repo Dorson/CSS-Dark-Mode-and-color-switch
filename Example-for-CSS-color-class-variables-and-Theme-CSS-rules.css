@@ -17,7 +17,7 @@ exceptional cases below. Computers use the last mentioned CSS setting.
 
 /* Set default color variables.  */
 
-:root {
+:root , html.snow-white {
 
 --color-html: #F9F9F9 ;
 --color-body: #fdfdfd ;
@@ -33,7 +33,7 @@ exceptional cases below. Computers use the last mentioned CSS setting.
 
 @media (prefers-color-scheme: dark) {
 
- :root {
+ html:not(.snow-white) {
   --color-html: #0e0b0b ;
   --color-body: #1a1414 ;
   --color-text: #d1d1d1 ;
