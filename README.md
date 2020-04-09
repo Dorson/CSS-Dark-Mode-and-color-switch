@@ -40,6 +40,12 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
     
     html[localMemory( ColorTheme == dark )] { backgrund: black ; }
     
+    OR similar as we do in the media rules :
+
+     @localMemory( ColorTheme == dark ) {
+        html , body { background: black ;  }
+      }
+    
     One could wish for the better CSS flexibility in the future :-)
     
 
