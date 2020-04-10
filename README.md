@@ -49,7 +49,7 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
     One could wish for the better CSS flexibility in the future :-)
     
 
-# Give us a like and stars on Github !
+# Give us a like and stars on Github ☆☆☆☆☆ !
 
 Have fun using our code. Keep it fun for others too.
 Keep the code open source as the original !
