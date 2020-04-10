@@ -66,8 +66,10 @@ https://material.io/design/color/dark-theme.html
 
 
 Good color picker tool for finding good theme colors:
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 
 
 Alternative color picker tool :
+
 https://www.w3schools.com/colors/colors_picker.asp
