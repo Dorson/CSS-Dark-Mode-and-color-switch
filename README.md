@@ -49,9 +49,12 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
     One could wish for the better CSS flexibility in the future :-)
     
 
-# Remember to keep the code open source as the original !
+# Give us a like and stars on Github !
 
- Have fun ! 
+Have fun using our code. Keep it fun for others too.
+Keep the code open source as the original !
+
+Have fun ! 
  
  
 
@@ -62,4 +65,9 @@ Color and style principles for the dark mode colors on websites and in apps:
 https://material.io/design/color/dark-theme.html
 
 
+Good color picker tool for finding good theme colors:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 
+
+Alternative color picker tool :
+https://www.w3schools.com/colors/colors_picker.asp
