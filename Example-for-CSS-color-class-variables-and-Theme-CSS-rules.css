@@ -31,7 +31,7 @@ exceptional cases below. Computers use the last mentioned CSS setting.
 
 /* If "dark" is set as preferred color in user app settings. */
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 
  html:not(.snow-white) {
   --color-html: #0e0b0b ;
