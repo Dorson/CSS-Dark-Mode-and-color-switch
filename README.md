@@ -10,43 +10,47 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
 
 # How to use  / How it works ?
  
- 1. Define color variables in CSS. As groups of html.className rules.
+ ## 1. Define color variables in CSS.
+    Name, define and group together CSS color variables in groups for the
+    :root.dark , html.dark {--color-background : gray ; } element rules.
+    
     Use those named color variables, instead of direct color values inside
     of following CSS rules later on.
     
     
- 2. Activate the html.class color theme by setting and saving the
-    CSS class of the HTML Tag with the JavaScript function call from
-    the button or link, or click, etc..
+ ## 2. Activate and set the html.dark CSS color variables
+    by setting and saving the CSS color class of the HTML Tag with
+    the JavaScript function call from the button or link, or click, etc..
     
     We can lazzy-load this JavaScript function from an external js-file,
     in the part of the page or app where user settings are set.
  
  
- 3. On-page-Load we set the last-saved HTML Tag's CSS color class
-    to remember the last saved ColorMode setting from the
-    LocalMemory of the browser.
+ ## 3. Remeber and use the last-saved CSS color class during load.
+    Do remember the last saved ColorMode memory setting from the
+    localStorage of the browser.
  
-    We need to do that on every page load with an event call of the JS functon.
-    Can use the js-file with that CSS class settings memory recall function on top
-    of page, before the page DOM frame is painted.
+    We need to do that on every page load with an event call of the JS
+    RememberClasses() functon. We can use the js-file with that
+    memory recall function on top of page, before the page
+    DOM frame is painted.
     
-    CSS is missing style rules with read-access of the localMemory,
+    CSS is missing style rules with read-access to the localMemory,
     so we need to use JavaSript for that :-(
     
     In the best case future of the CSS standard: we could just have read-only acess to
-    the LocalMeory list values of the browser, so that we could use the following
+    the localStorage values of the browser, so that we could use the following
     CSS rule, instead of the JavaScript to remember the last color setting of the user:
     
-    html[localMemory( ColorTheme == dark )] { backgrund: black ; }
+    html[localStorage( ColorTheme == dark )] { backgrund: black ; }
     
     OR similar as we do in the media rules :
 
-     @localMemory( ColorTheme == dark ) {
+     @localStorage( ColorTheme == "dark" ) {
         html , body { background: black ;  }
       }
     
-    One could wish for the better CSS flexibility in the future :-)
+    We could wish for the better CSS flexibility in the future :-)
     
 
 # Give us a like and stars on Github ☆☆☆☆☆ !
