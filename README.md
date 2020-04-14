@@ -8,7 +8,7 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
 
 We need this for the night time and our eyesight health. We need this for the pure HTML websites or HTML apps without user profiles. We need this pure CSS + JS color theme switch for the decentralized apps that work without servers. For all the cases, where we want to allow the user to switch theme colors without any login, or centralized profile.
  
-Such serverless code snippets / tools will help us to build the next generation of the Internet apps. The web 4.0 should be more decentralized to the devices of the users, instead of the server farms of some evil corp. Also it helps the network engineers to have less workload on the server side :-)
+Such serverless code snippets / tools will help us to build the next generation of the Internet apps. The web 4.0 should be more decentralized to the devices of the users, instead of the server farms of some evil corp. Also it helps the network engineers to have less workload on the server side :-)  😐😮 💡 🌗 🐙 😆😅😂
 
 
 # How to use  / How it works ?
