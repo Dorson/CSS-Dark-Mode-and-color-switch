@@ -4,9 +4,12 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
 # Try it here : https://dorson.github.io/CSS-Dark-Mode-and-color-switch/
 
 
-# Why ?
- We need this for the night time and our eyesight health.
+# Why do we need it ?
+
+We need this for the night time and our eyesight health. We need this for the pure HTML websites or HTML apps without user profiles. We need this pure CSS + JS color theme switch for the decentralized apps that work without servers. For all the cases, where we want to allow the user to switch theme colors without any login, or centralized profile.
  
+Such serverless code snippets / tools will help us to build the next generation of the Internet apps. The web 4.0 should be more decentralized to the devices of the users, instead of the server farms of some evil corp. Also it helps the network engineers to have less workload on the server side :-)
+
 
 # How to use  / How it works ?
  
@@ -26,23 +29,23 @@ Simple DarkMode AND multi color theme switch for Websites and apps.
     in the part of the page or app where user settings are set.
  
  
- ## 3. Remeber and use the last-saved CSS color class during load.
+ ## 3. Remember and use the last-saved CSS color class during load.
     Do remember the last saved ColorMode memory setting from the
     localStorage of the browser.
  
     We need to do that on every page load with an event call of the JS
-    RememberClasses() functon. We can use the js-file with that
+    RememberClasses() function. We can use the js-file with that
     memory recall function on top of page, before the page
     DOM frame is painted.
     
-    CSS is missing style rules with read-access to the localMemory,
-    so we need to use JavaSript for that :-(
+    CSS is missing style rules with read access to the localStorage memory,
+    so we need to use dynamic JavaSript events for settings recall :-( 😟 😓 😢 😭
     
-    In the best case future of the CSS standard: we could just have read-only acess to
+    In the best case future of the CSS standard: we could just have read-only access to
     the localStorage values of the browser, so that we could use the following
     CSS rule, instead of the JavaScript to remember the last color setting of the user:
     
-    html[localStorage( ColorTheme == dark )] { backgrund: black ; }
+    html[localStorage( ColorTheme == dark )] { background: black ; }
     
     OR similar as we do in the media rules :
 
