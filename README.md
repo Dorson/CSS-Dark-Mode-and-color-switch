@@ -39,7 +39,7 @@ Such serverless code snippets / tools will help us to build the next generation 
     DOM frame is painted.
     
     CSS is missing style rules with read access to the localStorage memory,
-    so we need to use dynamic JavaSript events for settings recall :-( 😟 😓 😢 😭
+    so we need to use dynamic JavaSript events for settings recall :-( 😟 😓 😢 😭 
     
     In the best case future of the CSS standard: we could just have read-only access to
     the localStorage values of the browser, so that we could use the following
