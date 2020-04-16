@@ -58,15 +58,16 @@
 
 /* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
 
+@media not screen and (prefers-color-scheme: dark) {
+
 html.dark { 
-
---color-html: #0e0b0b ;
---color-body: #1a1010 ;
---color-text: #d1d1d1 ;
---color-link: #4fbcff ;
---color-selected-text: #000 ;
---color-selected-bg: #CF7 ;
-
+  --color-html: #0e0b0b ;
+  --color-body: #1a1010 ;
+  --color-text: #d1d1d1 ;
+  --color-link: #4fbcff ;
+  --color-selected-text: #000 ;
+  --color-selected-bg: #CF7 ;
+ }
 }
 
 /* Deep Purple color variables, if "purple" is set as HTML tag's CSS class */ 
