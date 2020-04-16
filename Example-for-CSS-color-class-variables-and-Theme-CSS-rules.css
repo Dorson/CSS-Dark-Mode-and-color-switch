@@ -40,7 +40,19 @@ exceptional cases below. Computers use the last mentioned CSS setting.
   --color-link: #4fbcff ;
   --color-selected-text: #000 ;
   --color-selected-bg: #CF7 ;
-  }
+ }
+
+/* Reverse logic. White becomes dark AND the dark becomes white on click :-) */
+
+ :root.dark , html.dark {
+ --color-html: #F9F9F9 ;
+ --color-body: #fdfdfd ;
+ --color-text: #051105 ;
+ --color-link: #1122D8 ;
+ --color-selected-text: #000 ;
+ --color-selected-bg: #CF7 ;
+ }
+
 }
 
 /* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
