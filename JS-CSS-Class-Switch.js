@@ -3,34 +3,34 @@
 --- Original author :: Nik K. linkedin.com/in/nik--k---/   (  4.Feb 2020). 
 --- Code adoption   :: YourName  (date).
 --- License         :: GNU General Public License v 3.0.
---- Latest version	:: github.com/Dorson/CSS-Dark-Mode-and-color-switch
+--- Latest version	 :: github.com/Dorson/CSS-Dark-Mode-and-color-switch
 */
 
 window.onerror = null ;
 
-/*  Switch ON,OFF CSS class + Save it in local memory. */
+/*  Toggle Switch ON,OFF CSS class + remember it in localStorage. */
 
-function ClassSwitch(TagName, ClassName, MemoryName) {
+function ClassSwitch( TagName, ClassName, MemoryName ) {
+
+ const MemoryContent = localStorage.getItem( MemoryName ) ;
 
  /* If class was already set, then switch it OFF and clean memory */
   
-    if (localStorage.getItem( MemoryName ) === ClassName ) {
-        localStorage.removeItem( MemoryName );
-        document.querySelector( TagName ).classList.remove( ClassName );
+    if ( MemoryContent === ClassName ) {
+        localStorage.removeItem( MemoryName ) ;
+        document.querySelector( TagName ).classList.remove( ClassName ) ;
     }
 
- /* Else we clean old memory, save and set new setting  */
+ /* Else we remove old class + clean memory + save, set OR toggle new CSS class  */
   
-     else {
-        var MemoryContent = localStorage.getItem( MemoryName );
+     else {        
+        document.querySelector( TagName ).classList.remove( MemoryContent ) ;
+        window.localStorage.removeItem( MemoryName ) ;
 
-        document.querySelector( TagName ).classList.remove( MemoryContent );
-        localStorage.removeItem( MemoryName );
-
-        localStorage.setItem( MemoryName, ClassName );
-        document.querySelector( TagName ).classList.add( ClassName );
+        localStorage.setItem( MemoryName, ClassName ) ;
+        document.querySelector( TagName ).classList.toggle( ClassName ) ;
      }
 
-    return false;
+ return false;
 }
 
