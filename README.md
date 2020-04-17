@@ -23,10 +23,10 @@ Such serverless code snippets / tools will help us to build the next generation 
     
  ## 2. Activate and set the html.dark CSS color variables
     by setting and saving the CSS color class of the HTML Tag with
-    the JavaScript function call from the button or link, or click, etc..
+    the JavaScript ClassSwitch() function call from the button or link, or click, etc..
     
     We can lazzy-load this JavaScript function from an external js-file,
-    in the part of the page or app where user settings are set.
+    in the part of the page or app where user settings are set or re-set.
  
  
  ## 3. Remember and use the last-saved CSS color class during load.
