@@ -29,7 +29,7 @@
 }
 
 
-/* If "dark" is set as preferred color in user app settings. */
+/* If "dark mode" was set in browser or app settings already. */
 
 @media screen and (prefers-color-scheme: dark) {
 
@@ -41,22 +41,16 @@
   --color-selected-text: #000 ;
   --color-selected-bg: #CF7 ;
  }
-
-/* Reverse logic. White becomes dark AND the dark becomes white on click :-) */
-
- :root.dark , html.dark {
- --color-html: #F9F9F9 ;
- --color-body: #fdfdfd ;
- --color-text: #051105 ;
- --color-link: #1122D8 ;
- --color-selected-text: #000 ;
- --color-selected-bg: #CF7 ;
- }
-
 }
 
 
-/* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
+/*
+	Dark mode switch color variables, if we use "dark" as HTML tag's CSS class.
+	With exception logic, for screens only AND IF the user
+  did NOT set the dark mode in the app settings before.
+  Automatic dark mode colors are activated separetly in the other media rule
+  for (prefers-color-scheme: dark). No need to activate it two times !
+*/
 
 @media not screen and (prefers-color-scheme: dark) {
 
