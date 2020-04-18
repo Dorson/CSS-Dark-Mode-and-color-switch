@@ -33,7 +33,7 @@
 
 @media screen and (prefers-color-scheme: dark) {
 
- html:not(.snow-white) {
+ html:not(.snow-white):not(.dark) {
   --color-html: #0e0b0b ;
   --color-body: #1a1010 ;
   --color-text: #d1d1d1 ;
@@ -42,17 +42,6 @@
   --color-selected-bg: #CF7 ;
  }
 }
-
-
-/*
-  Dark mode switch color variables, if we use "dark" as HTML tag's CSS class.
-  With exception logic, for screens only AND IF the user
-  did NOT set the dark mode in the app settings before.
-  Automatic dark mode colors are activated separetly in the other media rule
-  for (prefers-color-scheme: dark). No need to activate it two times !
-*/
-
-@media not screen and (prefers-color-scheme: dark) {
 
 html.dark { 
   --color-html: #0e0b0b ;
@@ -62,7 +51,6 @@ html.dark {
   --color-selected-text: #000 ;
   --color-selected-bg: #CF7 ;
  }
-}
 
 /* Deep Purple color variables, if "purple" is set as HTML tag's CSS class */ 
 
