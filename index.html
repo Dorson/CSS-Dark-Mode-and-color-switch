@@ -299,40 +299,65 @@ document.addEventListener("DOMContentLoaded", AfterDark() , true ) ;
 
 function AfterDark() {
 
- var hour = new Date().getHours() ;
+ let hour = new Date().getHours() ;
 
-  if ( !localStorage.getItem( "ColorMode" ) && ( hour >= 20 || hour < 7 ) ) {
+ let ColorWasSet = localStorage.getItem( "ColorMode" ) ;
 
-     document.querySelector("html").classList.add( "dark" ) ;
+ let DarkWasSet = document.querySelector("html").classList.contains("dark") ;
+
+ if ( ( hour >= 20 || hour < 7 ) && !( ColorWasSet || DarkWasSet ) ) 
+  {
+      document.querySelector("html").classList.add( "dark" ) ;
    }
 }
 
 
 
-/*  Toggle Switch ON,OFF CSS class + remember it in localStorage. */
+/*  CSS class Toggle Switch. ON,OFF CSS class + remember in localStorage memory. */
+
 
 function ClassSwitch( TagName, ClassName, MemoryName ) {
 
- const MemoryContent = localStorage.getItem( MemoryName ) ;
 
- /* If class was already set, then switch it OFF and clean memory */
+ /* We use const variables to avoid logic errors, if their values change during process. */
+
+ const ClassWasActive = document.querySelector( TagName ).classList.contains( ClassName ) ;
+
+ const OldMemory = window.localStorage.getItem( MemoryName ) ;
+
+
+ /* If class is New and NOT-active. We remove possible OldMemory class.
+   Deep Clean memory cell. Activate and remember new CSS class in clean memory. 
+ */
   
-    if ( MemoryContent === ClassName ) {
-        localStorage.removeItem( MemoryName ) ;
-        document.querySelector( TagName ).classList.remove( ClassName ) ;
-    }
+    if ( !ClassWasActive && ( OldMemory !== ClassName ) ) {
 
- /* Else we remove old class + clean memory + save, set OR toggle new CSS class  */
-  
-     else {        
-        document.querySelector( TagName ).classList.remove( MemoryContent ) ;
-        window.localStorage.removeItem( MemoryName ) ;
+       if ( OldMemory ) {
+            document.querySelector( TagName ).classList.remove( OldMemory ) ;
+            window.localStorage.removeItem( MemoryName ) ;
+        }
 
-        localStorage.setItem( MemoryName, ClassName ) ;
-        document.querySelector( TagName ).classList.toggle( ClassName ) ;
+        document.querySelector( TagName ).classList.add( ClassName ) ;
+        window.localStorage.setItem( MemoryName , ClassName ) ;
      }
 
- return false;
+ /* Else CSS class was already active OR the switch memory was not clean.
+    We toggle given class. Remove possible OldMemory class. Deep Clean memory cell. 
+ */
+  
+     else {
+
+        document.querySelector( TagName ).classList.toggle( ClassName ) ;
+
+         if ( OldMemory ) {
+            document.querySelector( TagName ).classList.remove( OldMemory ) ;
+            window.localStorage.removeItem( MemoryName ) ;
+         }
+
+      }
+
+ return false ;
+
 }
 
 
