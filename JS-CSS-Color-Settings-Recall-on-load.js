@@ -42,11 +42,15 @@ document.addEventListener("DOMContentLoaded", AfterDark() , true ) ;
 
 function AfterDark() {
 
- var hour = new Date().getHours() ;
+ let hour = new Date().getHours() ;
 
-  if ( !localStorage.getItem( "ColorMode" ) && ( hour >= 20 || hour < 7 ) ) {
+ let ColorWasSet = localStorage.getItem( "ColorMode" ) ;
 
-     document.querySelector("html").classList.add( "dark" ) ;
+ let DarkWasSet = document.querySelector("html").classList.contains("dark") ;
+
+ if ( ( hour >= 20 || hour < 7 ) && !( ColorWasSet || DarkWasSet ) ) 
+  {
+      document.querySelector("html").classList.add( "dark" ) ;
    }
 }
 
