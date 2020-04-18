@@ -5,12 +5,12 @@ This is a working develeopment file for human readability.
 Use the CSS optimizer to reduce file size for published websites or apps.
 
 -++ LTS Flex CSS Theme websites and HTML apps.  +++-
---- Original author	:: Nik K. linkedin.com/in/nik--k---/    (  5.Jan 2020). 
+--- Original author	:: Nik K. linkedin.com/in/nik--k---/   (19.April.2020). 
 --- Code adoption 	:: YourName    (date).
---- License	      	:: GNU General Public License v 3.0.
+--- License         :: GNU General Public License v 3.0.
 --- Latest version	:: github.com/Dorson/LTS-flex-css-style-theme-generator
 
-Global size and style settings first, then we can overwrite them in
+Global color, size and style settings first, then we can overwrite them in
 exceptional cases below. Computers use the last mentioned CSS setting. 
  */
 
@@ -33,26 +33,14 @@ exceptional cases below. Computers use the last mentioned CSS setting.
 
 @media screen and (prefers-color-scheme: dark) {
 
- html:not(.snow-white) {
+ html:not(.snow-white):not(.dark) {
   --color-html: #0e0b0b ;
   --color-body: #1a1010 ;
   --color-text: #d1d1d1 ;
   --color-link: #4fbcff ;
   --color-selected-text: #000 ;
   --color-selected-bg: #CF7 ;
- }
-
-/* Reverse logic. White becomes dark AND the dark becomes white on click :-) */
-
- :root.dark , html.dark {
- --color-html: #F9F9F9 ;
- --color-body: #fdfdfd ;
- --color-text: #051105 ;
- --color-link: #1122D8 ;
- --color-selected-text: #000 ;
- --color-selected-bg: #CF7 ;
- }
-
+  }
 }
 
 /* Dark mode color variables, if "dark" is set as HTML tag's CSS class */
@@ -203,7 +191,7 @@ form *{
 /* GLOBAL COLORS that were not set before. */
 
 
-form {background-color: #e1effe;}
+form { background-color: rgba(240, 240, 240, 0.1) ; }
 
 
 button , input[type=submit] {
@@ -282,18 +270,18 @@ for logo, menu, links, search, login, etc. */
 /* .docker is the sticky menue bar at the bottom of screen
 for quick settings and buttons */
 
-.docker { margin: 1px ; padding: 0px ; position: fixed ;
-bottom:0%; left: 15%; z-index:99; width: 13.5rem; height: 2.7rem; color: var(--color-text) ;
-text-align: left ; overflow: hidden ; background: transparent ; border: 0px ;
+.docker { background: transparent ; color: var(--color-text) ;
+margin: 1px ; padding: 0px ; border: 0px ;
+position: fixed ; bottom: 0% ; left: 15% ; z-index: 99 ; width: 13.5rem ; height: 2.7rem ; 
+text-align: left ; vertical-align: top ; overflow: hidden ;  
 }
 
 .docker:hover , .docker:active { background: var(--color-body) ; color: var(--color-text) ;
-margin: 1px ; padding: 0.1rem 0.4rem 1rem 0.4rem ;
+margin: 1px ; padding: 0.1rem 0.4rem 3rem 0.4rem ;
 position: fixed; bottom: 0px ; left: 2% ; z-index:250; width: 73% ; height: 75% ; 
 border-radius: 8px ; box-shadow: 0px 1px 33px #aaa ; border-bottom: 3rem double rgba(150, 150, 150, 0.1) ;
 display: block ; overflow: auto ; vertical-align: top ; text-align: center ;
 }
-
 
 
 .v-center { vertical-align: middle; }
@@ -310,5 +298,4 @@ display: block ; overflow: auto ; vertical-align: top ; text-align: center ;
       display: none !important;
     }
 }
-
 
