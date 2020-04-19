@@ -525,7 +525,73 @@ Keep the code open source as the original !
 </a>
 
 </div>
+	
 
+<style>
+ .search-box {
+  background-color: #f1f1f1 ; color: #111 ; opacity: 0.7 ; overflow: hidden ;
+  padding: 0.1rem 0.5rem ; margin: 1px ; text-align: right ;
+  position: fixed ; top: 1px ; right: 2.5rem ; width : 10rem ; height: 1.9rem ;
+  z-index: 10 ;
+  font: bold 1rem/1.1rem sans ;  border-radius: 1rem ; border: 0px ;
+ }
+
+ .search-box:hover , .search-box:active {
+  background: #edf5f7 ; color: #111 ; opacity: 1 ;
+  padding: 0.7rem ; margin: 1px ; text-align: right ;
+  position: fixed ; top: 1px ; right: 2.5rem ; width : 70% ; height: auto ;
+  z-index: 10 ;
+  font: bold 1rem/1.1rem sans ;  border-radius: 1rem ; border: 0px ;
+  box-shadow:9px 9px 20px #bbb;z-index:250; overflow: visible ; 
+ }
+
+ .search-box:hover .invisible-on-hover , .search-box:active .invisible-on-hover { display: none ; }
+ .search-box .visible-on-hover { visibility: hidden ; }
+ .search-box:hover .visible-on-hover, .search-box:active .visible-on-hover { visibility: visible ; }
+
+</style>
+
+
+<div title=" Top Search Box " class="search-box" >
+
+<div title=" fake input box " class="invisible-on-hover"
+  style=" background: #efefef ; color: #111 ;
+  padding: 0.1rem 0.5rem ; margin: 1px ; text-align: left ;
+  position: inline ; width : 5rem ; height : 1.4rem ;  float : left ;
+  font: bold 0.9rem/1rem sans ;  border-radius: 0.7rem ; border: 0.111rem solid #00B4CC; "
+ >
+ ...
+</div>
+
+
+<div alt="search icon "  class="invisible-on-hover"
+  style=" background: #34b8e5 ; color: #000 ; opacity: 1 ;
+  padding: 0.111rem ; margin: 1px ; text-align: center ; text-shadow: 1px 1px 0.3rem #fff;
+  position: inline ; width : 3rem ;  height : 1.5rem ;  white-space: nowrap; float : right ;
+  font: bold 1rem/1.3rem sans ;  border-radius: 0.6rem ; border: 0px; " 
+ >
+ &#128269; 
+</div>
+
+
+<div class="visible-on-hover" >
+<input type="text" placeholder="Search..." title=" fake input box "
+  style=" background: #efefef ; color: #111 ;
+  padding: 0.1rem 0.5rem ; margin: 1px ; text-align: left ;
+  position: inline ; width : 60% ; height : 2rem ;  clear : none ; float : right ;
+  font: bold 0.9rem/1rem sans ;  border-radius: 0.7rem ; border: 0.111rem solid #00B4CC; "
+ >
+<div type="submit" alt="fake search icon "
+  style=" background: #34b8e5 ; color: #000 ; opacity: 1 ;
+  padding: 0.111rem ; margin: 1px ; text-align: center ; text-shadow: 1px 1px 0.3rem #fff;
+  position: inline ; width : 4rem ;  height : 2rem ;  clear: none ; float : right ;
+  font: bold 1.5rem/1.9rem sans ;  border-radius: 0.8rem ; border: 0px; "
+ >
+  &#128269;
+</div>
+</div>
+
+</div>
 
 <!--
 -++ CSS Dark Mode and Color Theme switch for websites and HTML apps.  +++-
