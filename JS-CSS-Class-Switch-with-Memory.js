@@ -55,3 +55,24 @@ function ClassSwitch( TagName, ClassName, MemoryName ) {
 
 }
 
+
+/* 
+   Dual Flip CSS class Toggle Switch. Set THis OR the OTher CSS class.
+   Flips or changes CSS class between two given options.
+   If Class1 was NOT active: We switch it ON. Else: we flip switch Class2 ON.
+   Only one can exist at the same time ! Class1 will always be switched on first !
+*/
+
+
+function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
+
+ const ClassWasActive = document.querySelector( TagName ).classList.contains( Class1 ) ; 
+
+ if ( !ClassWasActive ) { ClassSwitch( TagName , Class1 , MemoryName ) ; }
+
+ else { ClassSwitch( TagName , Class2 , MemoryName ) ; }
+
+ return false ;
+
+}
+
