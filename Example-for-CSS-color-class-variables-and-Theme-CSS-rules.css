@@ -33,7 +33,7 @@ exceptional cases below. Computers use the last mentioned CSS setting.
 
 @media screen and (prefers-color-scheme: dark) {
 
- html:not(.snow-white):not(.dark) {
+ html:not(.snow-white) {
   --color-html: #0e0b0b ;
   --color-body: #1a1010 ;
   --color-text: #d1d1d1 ;
