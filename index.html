@@ -353,6 +353,26 @@ function ClassSwitch( TagName, ClassName, MemoryName ) {
 }
 
 
+/* 
+   Dual Flip CSS class Toggle Switch. Set THis OR the OTher CSS class.
+   Flips or changes CSS class between two given options.
+   If Class1 was NOT active: We switch it ON. Else: we flip switch Class2 ON.
+   Only one can exist at the same time ! Class1 will always be switched on first !
+*/
+
+
+function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
+
+ const ClassWasActive = document.querySelector( TagName ).classList.contains( Class1 ) ; 
+
+ if ( !ClassWasActive ) { ClassSwitch( TagName , Class1 , MemoryName ) ; }
+
+ else { ClassSwitch( TagName , Class2 , MemoryName ) ; }
+
+ return false ;
+
+}
+
 
 </script>
 
@@ -509,16 +529,15 @@ Keep the code open source as the original !
 </div>
 
 
-<div title=" Top-right Night Mode switch "
+<div title=" Top-right Night-Mode dual Flip Switch. "
   style=" background: rgba(229, 229, 229, 0.5) ; color: #111 ;
   padding: 1px ; margin: 1px ; width : 1.5rem ;
   position: fixed ; top: 6rem ; right: 0.45rem ; 
   z-index: 15 ; text-align: center ; word-wrap: break-word ;
   font: bold 1rem/1.1rem sans ;  border-radius: 1rem ; border: 0px ; " 
  >
-
 <a title=" Lights ON, OFF. "
-   href="javascript:void(0);" onclick="ClassSwitch('html' , 'blue' , 'ColorMode');" 
+   href="javascript:void(0);" onclick="DualFlipClassSwitch('html' , 'dark' , 'snow-white' , 'ColorMode');" 
    style=" color: #111 ; padding: 0.4em 0.1em ; margin: 1px ; text-decoration: none ; float: right ; " 
  >
 🌓<br />
