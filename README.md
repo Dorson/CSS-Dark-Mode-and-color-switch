@@ -1,6 +1,6 @@
 # CSS Dark Mode and Color Theme Switch
 
-Flexible DarkMode AND multi color theme switch for Websites and apps.
+Flexible Dark / Night Mode AND multi color theme switch for Websites and apps.
 All basis CSS, clean Java Script and decentralized too !
 It's nice to have sunset colors during the evening :-)
 
@@ -11,7 +11,7 @@ It's nice to have sunset colors during the evening :-)
 
 We need this for the night time and our eyesight health. We need this for the pure HTML websites or HTML apps without user profiles. We need this pure CSS + JS color theme switch for the decentralized apps that work without servers. For all the cases, where we want to allow the user to switch theme colors without any login, or centralized profile.
  
-Such serverless code snippets / tools will help us to build the next generation of the Internet apps. The web 4.0 should be more decentralized to the devices of the users, instead of the server farms of some evil corp. Also it helps the network engineers to have less workload on the server side :-)  😐😮 💡 🌗 🐙 😆😅😂
+Such server-less code snippets / tools will help us to build the next generation of the Internet apps. The web 4.0 should be more decentralized to the devices of the users, instead of the server farms of some evil corp. Also it helps the network engineers to have less workload on the server side :-)  😐😮 💡 🌗 🐙 😆😅😂
 
 
 # How to use  / How it works ?
@@ -100,12 +100,12 @@ html.dark {
     
 ```
     
-    We can async / lazzy-load the JavaScript switch function from
-    an external js-file, in the part of the HTML or app where user
+    We can async / lazy-load the JavaScript switch function from
+    an external JS-file, in the part of the HTML or app where user
     settings are set or re-set.
     
     No need to load it fast. Can be slow, because it's only active,
-    whent the user can already click something.
+    when the user can already click something.
     
     
   ```
@@ -122,7 +122,7 @@ html.dark {
  ## 3. Remember the last color class settings during load time.
 
   We need to remember our color settings on every new page load.
-  To remember the color class settings we use the RememberClasses() functon
+  To remember the color class settings we use the RememberClasses() function
   from the JS file of :
 
 
@@ -151,9 +151,9 @@ html.dark {
   We can have this RememberClasses() function with an event call on top of every page,
   if we want to load the color class settings faster. 
 
-  OR we can keep in one simple file instead.
+  OR we can keep it in one simple file instead.
   And we can load it from the external Java Script file without the need to write
-  in on every page. The RememberClasses() functon must be loaded fast, to
+  in on every page. The RememberClasses() function must be loaded fast, to
   remember the color settings qickly. Keep settings files cached, simple and small !
   External JS files on over-loaded pages will react slower !
 
