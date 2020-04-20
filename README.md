@@ -37,16 +37,58 @@ Such serverless code snippets / tools will help us to build the next generation 
     in the part of the page or app where user settings are set or re-set.
  
  
- ## 3. Remember and use the last-saved CSS color class during load.
-    Do remember the last saved ColorMode memory setting from the
-    localStorage of the browser.
- 
-    We need to do that on every page load with an event call of the JS
-    RememberClasses() function. We can use the js-file with that
-    memory recall function on top of page, before the page
-    DOM frame is painted.
-    
-    CSS is missing style rules with read access to the localStorage memory,
+ ## 3. Remember the last color class settings during load time.
+
+  We need to remember our color settings on every new page load.
+  To remember the color class settings we use the RememberClasses() functon
+  from the JS file of :
+
+
+  ```
+
+  JS-CSS-Class-Settings-Recall-on-load.js 
+
+  ```
+
+
+  We call the RememberClasses() function with an event call, when the page is
+  loaded. Optimally in the <head>...</head> part of the HTML, where it's faster.
+
+
+  ```
+
+  document.addEventListener("DOMContentLoaded", RememberClasses() , true ) ;
+
+  ```
+
+
+  We can have this RememberClasses() function with an event call on top of every page,
+  if we want to load the color class settings faster. 
+
+  OR we can keep in one simple file instead.
+  And we can load it from the external Java Script file without the need to write
+  in on every page. The RememberClasses() functon must be loaded fast, to
+  remember the color settings qickly. Keep settings files cached, simple and small !
+  External JS files on over-loaded pages will react slower !
+
+
+  Optimally we load the settings file in the <head>...</head> part of the HTML,
+  where it loads faster. If the code logic permits us, then the settings file should
+  be loaded before any other script. So load the other non-essential scripts with async !
+
+
+  ```
+   <script type="text/javascript" src="https://example.org/js/JS-CSS-Class-Settings-Recall-on-load.js"></script>
+
+  ```
+
+   This is how we can have user settings without server profiles or accounts :-)
+   The basic, non-safety settings can live in the localStorage of the borwser.
+
+
+
+  ### In the Better Future : 
+    In 2020 the CSS is missing style rules with read access to the localStorage memory,
     so we need to use dynamic JavaSript events for settings recall :-( 😟 😓 😢 😭 
     
     In the best case future of the CSS standard: we could just have read-only access to
