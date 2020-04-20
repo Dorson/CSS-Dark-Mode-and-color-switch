@@ -94,7 +94,11 @@ Such serverless code snippets / tools will help us to build the next generation 
     In the best case future of the CSS standard: we could just have read-only access to
     the localStorage values of the browser, so that we could use the following
     CSS rule, instead of the JavaScript to remember the last color setting of the user:
-    
+ 
+ 
+```
+  Possible future realty example: 
+  
     html[localStorage( ColorTheme == dark )] { background: black ; }
     
     OR similar as we do in the media rules :
@@ -102,7 +106,8 @@ Such serverless code snippets / tools will help us to build the next generation 
      @localStorage( ColorTheme == "dark" ) {
         html , body { background: black ;  }
       }
-    
+ ```
+ 
     We could wish for the better CSS flexibility in the future :-)
     
 
