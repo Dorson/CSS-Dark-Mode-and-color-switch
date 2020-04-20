@@ -38,8 +38,23 @@ Such serverless code snippets / tools will help us to build the next generation 
     
 ```
     
-    We can lazzy-load the JavaScript functions from an external js-file,
-    in the part of the page or app where user settings are set or re-set.
+    We can async / lazzy-load the JavaScript switch function from
+    an external js-file, in the part of the HTML or app where user
+    settings are set or re-set.
+    
+    No need to load it fast. Can be slow, because it's only active,
+    whent the user can already click something.
+    
+    
+  ```
+   < script
+      async type="text/javascript"
+      src="https://example.org/js/JS-CSS-Class-Switch-with-Memory.js"
+    >
+   </script>
+
+  ```
+    
  
  
  ## 3. Remember the last color class settings during load time.
