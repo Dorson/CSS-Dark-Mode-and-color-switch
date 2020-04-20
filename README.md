@@ -1,7 +1,10 @@
 # CSS Dark Mode and Color Theme Switch
-Simple DarkMode AND multi color theme switch for Websites and apps.
 
-# Try it here : https://dorson.github.io/CSS-Dark-Mode-and-color-switch/
+Flexible DarkMode AND multi color theme switch for Websites and apps.
+All basis CSS, clean Java Script and decentralized too !
+It's nice to have sunset colors during the evening :-)
+
+# See Live Demo here : https://dorson.github.io/CSS-Dark-Mode-and-color-switch/
 
 
 # Why do we need it ?
@@ -16,25 +19,83 @@ Such serverless code snippets / tools will help us to build the next generation 
  ## 1. Define color variables in CSS.
     Name, define and group together CSS color variables in groups for the
     :root.dark , html.dark {--color-background : gray ; } element rules.
+
+
+```
+
+<style>
+
+ :root , :root.snow-white {
+
+  --color-html: #0e0b0b ;
+  --color-body: #241818 ;
+  --color-text: #d1d1d1 ;
+  --color-link: #4fbcff ;
+  --color-selected-text: #000 ;
+  --color-selected-bg: #CF7 ;
+
+ }
+ 
+ /*   Dark mode color variables, if "dark" is set as HTML tag's CSS class */
+
+html.dark { 
+
+--color-html: #0e0b0b ;
+--color-body: #1a1010 ;
+--color-text: #d1d1d1 ;
+--color-link: #4fbcff ;
+--color-selected-text: #000 ;
+--color-selected-bg: #CF7 ;
+
+}
+ 
+</style>
+
+```
     
-    Use those named color variables, instead of direct color values inside
-    of following CSS rules later on.
+    Then we use those named color variables, instead of direct color values inside
+    of the other CSS rules later on.
     
+    
+```
+
+<style>
+ html { background: var(--color-html) ; }
+ 
+ body {
+  background: var(--color-body) ; color: var(--color-text) ;
+  padding: 2rem 3% 3rem 3% ;
+  min-height: 99% ; display: block ;
+}
+</style>
+
+```
     
  ## 2. Activate and set the html.dark CSS color variables
     by setting and saving the CSS color class of the HTML Tag with
     the JavaScript function call from the button or link, or click, etc..
  
+ 
  ```
  
-   // This will switch beteen two defined color classes.
+   <!-- This will switch beteen two defined color classes. -->
    
-    onclick="DualFlipClassSwitch('html' , 'dark' , 'snow-white' , 'ColorMode');"
-
-   // This will switch ON, OFF one color. OFF means default color.
-   // Culd be an issue if the default browser color is similar to our color.
+   < button    
+     onclick="DualFlipClassSwitch('html' , 'dark' , 'snow-white' , 'ColorMode');"
+    >
+    🌓 ⇄ 💡
+   </button>
     
-    onclick="ClassSwitch('html' , 'purple' , 'ColorMode');"
+   <!--
+     This will switch ON, OFF one color. OFF means default color.
+     Culd be an issue if the default browser color is similar to our color.
+   -->
+    
+   < button 
+     onclick="ClassSwitch('html' , 'purple' , 'ColorMode');"
+    >
+    🌓 ⇄ 💡
+   </button>
     
 ```
     
@@ -76,9 +137,13 @@ Such serverless code snippets / tools will help us to build the next generation 
 
 
   ```
-
+  
+ <script>
+ 
   document.addEventListener("DOMContentLoaded", RememberClasses() , true ) ;
-
+  
+ </script>
+ 
   ```
 
 
@@ -97,14 +162,14 @@ Such serverless code snippets / tools will help us to build the next generation 
   be loaded before any other script. So load the other non-essential scripts with async !
 
 
-  ```
+```
   
   < script type="text/javascript"
     src="https://example.org/js/JS-CSS-Class-Settings-Recall-on-load.js"
     >
   </script>
 
-  ```
+```
 
    This is how we can have user settings without server profiles or accounts :-)
    The basic, non-safety settings can live in the localStorage of the borwser.
