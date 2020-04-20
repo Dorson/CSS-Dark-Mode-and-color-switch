@@ -26,11 +26,16 @@ Such serverless code snippets / tools will help us to build the next generation 
     the JavaScript function call from the button or link, or click, etc..
  
  ```
+ 
+   // This will switch beteen two defined color classes.
+   
     onclick="DualFlipClassSwitch('html' , 'dark' , 'snow-white' , 'ColorMode');"
 
-    OR just the ON, OFF Switch function:
+   // This will switch ON, OFF one color. OFF means default color.
+   // Culd be an issue if the default browser color is similar to our color.
     
     onclick="ClassSwitch('html' , 'purple' , 'ColorMode');"
+    
 ```
     
     We can lazzy-load the JavaScript functions from an external js-file,
