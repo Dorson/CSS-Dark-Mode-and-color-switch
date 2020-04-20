@@ -17,9 +17,10 @@ Such serverless code snippets / tools will help us to build the next generation 
 # How to use  / How it works ?
  
  ## 1. Define color variables in CSS.
-    Name, define and group together CSS color variables in groups for the
-    :root.dark , html.dark {--color-background : gray ; } element rules.
-
+ 
+    First: We name, define and group together the CSS color variables
+    in CSS classes for the :root or the html tag. We basically create
+    global CSS variables with color values and nice names.
 
 ```
 
