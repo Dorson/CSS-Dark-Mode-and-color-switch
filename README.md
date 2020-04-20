@@ -98,7 +98,11 @@ Such serverless code snippets / tools will help us to build the next generation 
 
 
   ```
-   <script type="text/javascript" src="https://example.org/js/JS-CSS-Class-Settings-Recall-on-load.js"></script>
+  
+  < script type="text/javascript"
+    src="https://example.org/js/JS-CSS-Class-Settings-Recall-on-load.js"
+    >
+  </script>
 
   ```
 
