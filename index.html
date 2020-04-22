@@ -257,26 +257,42 @@ display: block ; overflow: auto ; vertical-align: top ; text-align: center ;
 window.onerror = null ;
 
 
-/* During load time, we remember the saved CSS classes from local memory */
+/*
+  During load time, we remember the saved CSS classes from localStorage
+  Only works with HTML Tags that are already loaded before the script run !
+  Optimally the HTML tag. Works for the first Tag of it's type only !
+*/
 
+document.addEventListener( 'DOMContentLoaded' , function() {
 
-document.addEventListener("DOMContentLoaded", RememberClasses() , true ) ;
+  RememberClasses() ;
+
+});
+
 
 function RememberClasses() {
 
- var ClassMemory = [
+ const ClassMemory = [
       ["html" , "ColorMode"] ,
       ["html" , "TextSize"] 
    ] ;
 
- for ( let [ Tag, MemoryName ] of ClassMemory ) {
-    /*  On Errors we skip one loop. */
-    if (!localStorage.getItem( MemoryName ) || !document.querySelector( Tag ) ) {
+
+ for ( let [ Tag , MemoryName ] of ClassMemory ) {
+
+    let TagNotAlive = !(document.querySelector( Tag )) ;
+
+    let MemoryValue = window.localStorage.getItem( MemoryName ) ;
+
+    /*  On logic Errors we skip one loop. */
+
+    if ( !MemoryValue || TagNotAlive ) {
        continue ;
      }
-     else {
+
     /* Else we remember and set CSS classes. */
-        var MemoryValue = localStorage.getItem( MemoryName );
+     else {
+
         document.querySelector( Tag ).classList.add( MemoryValue );
       }
   }
