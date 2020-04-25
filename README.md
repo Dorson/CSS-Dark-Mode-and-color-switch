@@ -89,7 +89,7 @@ html.dark {
     
    <!--
      This will switch ON, OFF one color. OFF means default color.
-     Culd be an issue if the default browser color is similar to our color.
+     Can be a logic paradox, if the default browser color is very similar.
    -->
     
    < button 
