@@ -173,7 +173,7 @@ html.dark {
 ```
 
    This is how we can have user settings without server profiles or accounts :-)
-   The basic, non-safety settings can live in the localStorage of the borwser.
+   The basic, non-safety settings can live in the localStorage of the browser.
 
 
 
